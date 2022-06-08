@@ -1,0 +1,192 @@
+body {
+    
+    font-size: 15px;
+    background-color: rgb(255, 234, 196);
+    color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /* background: url("../project/intro.jpg") no-repeat center center; */
+    background-size: cover;
+    min-height:100%;
+    /* картинка не занимает полный экран */
+    /* -webkit-background-composite: cover; */
+}
+.intro__title {
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    color: white;
+}
+.intro__title:after {
+    content:"";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 60px auto 20px;
+}
+
+.intro__inner {
+    text-align: center;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+
+}
+.intro__suptitle {
+    margin-bottom: 20px;
+
+    text-align: center;
+    font-size: 72px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-top: 30px;
+
+}
+.header__logo {
+    font-size: 30px;
+    font-weight: 700px;
+    color: white;
+}
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+
+}
+.nav__link {
+    
+    color: white;
+    vertical-align: top;
+    margin: 0 15px;
+    transition: color .1s linear;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    opacity: 0;
+
+    background-color: #f5e4a7;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    color: rgb(255, 210, 128);
+}
+
+.nav__link:hover:after, .nav__link.active:after {
+    opacity: 1;
+
+}
+.nav__link.active {
+    color: #f5e4a7;
+}
+/* button */
+.btn {
+    display: inline-block;
+    border: 3px solid #fff;
+    vertical-align: top;
+
+    padding: 8px 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transform: background .3s linear;
+    /* почему красный? */
+
+}
+.btn:hover {
+    background-color: rgb(204, 153, 76);
+}
+.slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+.slider__item {
+    width: 23%;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    border-top: 3px solid white;
+    opacity: .7;
+    position: relative;
+}
+.slider__num {
+    font-size: 24px;
+    font-weight: 700px;
+}
+.slider__item.active {
+    opacity: 1;
+}
+.slider__item.active:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(238, 134, 134);
+}
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    
+}
