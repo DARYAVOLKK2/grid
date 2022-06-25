@@ -31,8 +31,6 @@ body {
 	font-size: 32px;
 	color: black;
 	padding: 0 12px 3px 0;
-	
-
 }
 .logo::after {
 	right: 0;
@@ -55,6 +53,9 @@ body {
 }
 .nav__link.active {
 	color:#606060;
+}
+.nav__btn {
+	display: none;
 }
 .nav__link {
 	color: black;
@@ -84,12 +85,15 @@ body {
 .services__row {
 	display: flex;
 	column-gap: 30px;
-
+	flex-wrap: wrap;
 }
-
+.services__card {
+	flex: 1 1 0;
+	min-width: 315px;
+	row-gap: 60px;
+}
 .service__card_img {
 	margin-bottom: 30px;
-
 }
 .service__card_tittle {
 	font-weight: 600;
@@ -103,8 +107,7 @@ body {
 /* проекты */
 .portfolio {
 	background-color: #F1F1F1;
-	padding: 90px 0;
-	
+	padding: 90px 0;	
 }
 .project {
 	text-align: center;
@@ -113,8 +116,8 @@ body {
 	margin-bottom: 90px;
 }
 .portfolio__tittle {
-	margin-bottom: 70.33px;
 	text-align: center;
+	margin-bottom: 70.33px;
 }
 .project__img {
 	margin-bottom: 40px;
@@ -123,8 +126,7 @@ body {
 	font-size: 18px;
 	font-weight: 400;
 	text-decoration: underline;
-	
-
+	margin-bottom: 90px;
 }
 .project__tittle a {
 	color: black;
@@ -132,4 +134,62 @@ body {
 .tittle__1 {
 	font-weight: 600;
 	font-size: 34px;
+}
+/* footer */
+
+.container {
+	text-align: center;
+
+}
+.contacts__tittle {
+	font-weight: 600;
+	font-size: 34px;
+	margin-top: 90px;
+	margin-bottom: 40px;
+
+}
+.contacts__content {
+	font-weight: 400;
+	font-size: 18px;
+	margin: 0 auto 40px;
+	max-width: 480px;
+
+}
+.contacts__content p + p {
+	margin-top: 1em;
+}
+.contacts__button {
+	margin-bottom: 80px;
+}
+.btn:hover, .btn:focus {
+	background-color: #FDA300;
+}
+.btn:active {
+	background-color: black;
+	position: relative;
+	top: 1px;
+}
+.btn {
+	padding: 7px 22px;
+	display: inline-block;
+	color: white;
+	background-color: black;
+	border-radius: 30px;
+	font-size: 18px;
+
+	transition: background-color 0.2s ease-in, top 0.2s ease-in;
+
+}
+.contacts__social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 60px;
+	margin-bottom: 40px;
+
+
+}
+.contacts__footer {
+	color: #828282;
+
 }
